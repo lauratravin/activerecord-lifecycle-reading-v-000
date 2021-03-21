@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
 
   belongs_to :author
-  validate :is_title_case 
+  validate :is_title_case
 
   private
 
@@ -12,6 +12,6 @@ class Post < ActiveRecord::Base
   end
 
   def make_title_case
-    self.title = self.title.titlecase
+    self.title = self.title.titlecase #titlecase capitalizes all the words
   end
 end
